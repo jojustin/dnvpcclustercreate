@@ -33,7 +33,6 @@ resource "ibm_container_vpc_cluster" "cluster" {
   name              = "${var.vpc_name}-cluster-dn"
   vpc_id            = ibm_is_vpc.vpc.id
   # kube_version      = "4.17.28_openshift"
-  kube_version      = "4.17.28_openshift"
   worker_count      = 2
   resource_group_id = data.ibm_resource_group.resource_group.id
   flavor            = "bx3d.4x20"
