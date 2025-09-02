@@ -1,6 +1,6 @@
 variable "region" {
   type        = string
-  default     = "us-east"
+  default     = "ca-tor"
   description = "IBM Cloud region"
 }
 
@@ -12,7 +12,7 @@ variable "ibmcloud_api_key" {
 
 variable "zone" {
   type        = string
-  default     = "us-east-1"
+  default     = "ca-tor-1"
 }
 
 variable "vpc_name" {
