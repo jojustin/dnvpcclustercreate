@@ -58,7 +58,7 @@ variable "ocp_entitlement" {
 
 variable "cos_name" {
   type        = string
-  default     = "jej-dn-cos-mon"
+  default     = "jej-dn-cos"
 }
 
 variable "resource_group_id" {
