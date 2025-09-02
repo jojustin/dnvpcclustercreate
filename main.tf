@@ -24,9 +24,6 @@ resource "ibm_resource_instance" "cos_instance" {
   service           = "cloud-object-storage"
   plan              = "standard"
   location          = "global"
-  parameters = {
-    service-endpoints: "public"
-  }
 }
 
 resource "ibm_container_vpc_cluster" "cluster" {
@@ -35,7 +32,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
   # kube_version      = "4.17.28_openshift"
   worker_count      = 2
   resource_group_id = data.ibm_resource_group.resource_group.id
-  flavor            = "bx3d.4x20"
+  flavor            = "bx2.16x64"
   disable_public_service_endpoint = false
   cos_instance_crn  = ibm_resource_instance.cos_instance.id
   zones {
